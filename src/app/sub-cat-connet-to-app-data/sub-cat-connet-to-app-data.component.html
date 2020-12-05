@@ -1,0 +1,33 @@
+<h1 class="h2">Connect To Your Application And Data</h1>
+
+<div class="row">
+ <nav class="col-md-2 d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <div class="nav flex-column">
+            <li *ngFor="let activity of subactivitiesList"  [ngClass]="{'active': selectedItem == activity.name}" (click)="listClick(activity.name)" class="nav-link" >
+                <a [routerLink]="activity.link">
+                    <label class="text-center"><fa-icon [icon]="activity.icon"></fa-icon></label>
+                    <label>{{activity.name}}</label>
+                </a>
+            </li>
+        </div>
+    </div>
+</nav>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="pt-3 pb-2 mb-3 border-bottom">
+        <h6>Select Activity Subcategory</h6>
+      </div>
+<div class="col">
+    <h2 [innerHtml]="selectedItem" *ngIf="selectedItem"></h2>
+          <router-outlet></router-outlet>
+
+</div>
+
+      <div class="row justify-content-end">
+        <button type="button" class="btn btn-primary" >Finish</button>
+        <a href="/" type="button" class="btn btn-danger" >Cancel</a>
+      </div>
+</main>  
+
+</div>
+

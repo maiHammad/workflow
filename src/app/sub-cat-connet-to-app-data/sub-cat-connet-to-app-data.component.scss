@@ -1,0 +1,197 @@
+.row{
+    height: 100%;
+}
+.row.justify-content-end{
+    height:1rem;
+    button:first-child{
+        margin-right: 1rem;
+    }
+}
+.col{
+    min-height: 30rem;
+   h2{
+    background-color: #eee;
+    padding-left: 1rem;
+    padding: 0.5rem 1rem;
+margin-bottom: 0.5rem;
+   }
+}
+.sidebar{
+    padding-right: 0;
+  &:before {
+    content: '';
+    width: 20%;
+    background-color: #3d6ec1;
+    display: inline-flex;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+} 
+.sidebar-sticky{
+z-index: 1;
+position: relative;    
+
+.nav-link{
+    padding:0rem;
+    max-height: 54px;
+
+    :hover,&.active {
+        background-color: lightgrey;
+
+        label:nth-child(2){
+        color: #1c4a98;
+        }
+      label:first-child{
+        background-color: #6494e6;
+
+      }
+    }
+a{
+    display: block;
+    width:100%;
+    height: 100%;
+    z-index: 1;
+}
+label {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 0rem;
+
+}
+fa-icon {
+    font-size: 1.3em;
+    margin-right: 0.5em;
+    color: white;
+
+}
+label:first-child{
+    color: white;
+    padding-left: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+   height: 54px;
+   width:20.9%;
+   
+}
+
+} 
+}
+
+
+}
+
+.h2{
+    padding: 0.5rem;
+    background-color: lightgrey;
+    margin:0;
+}
+main{
+    h1{
+width:100%;
+   }
+    h6 {
+        color: #9e9898;
+    }
+
+}
+
+@media (max-width:1440px) {
+.sidebar{
+ &:before {
+    width: 16%;
+}
+.sidebar-sticky{
+ .nav-link{
+     label:first-child {
+    width: 16.9%;
+    margin-right: 0.2rem;
+
+}   
+
+label:nth-child(2){
+width:80%;
+font-size: 0.9rem;
+
+} 
+ }
+}
+
+
+}
+}
+
+@media (max-width:1152px) {
+    .sidebar{
+    .sidebar-sticky{
+     .nav-link{  
+        fa-icon{
+            
+            font-size: 0.9em;
+        }
+        label:first-child {
+        padding-left: 0.1rem;
+        }
+    label:nth-child(2){
+    font-size: 0.8rem;
+    
+    } 
+     }
+    }
+    
+    
+    }
+    }
+    @media (max-width:1152px) {
+        .sidebar{
+        .sidebar-sticky{
+         .nav-link{  
+
+        label:nth-child(2){
+        font-size: 0.75rem;
+        
+        } 
+         }
+        }
+        
+        
+        }
+        }
+
+
+    @media (max-width:800px) {
+        .sidebar{
+            flex: 0 0 22.666667%;
+            max-width: 22.666667%;
+        }
+    h1,h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:600px) {
+  main{
+      width:90%;
+  }
+    .sidebar {
+        flex: 0 0 1%;
+        max-width: 10%;
+        &:before{
+            width:100%;
+        }
+        .sidebar-sticky{
+    .nav-link{  
+        label:nth-child(2){
+            display: none;
+            } 
+            label:first-child {
+             width:100%;
+             padding-left: 0.5rem;
+
+             fa-icon{
+            
+                font-size: 1em;
+            }
+                }
+            }
+        }
+    }
+}
