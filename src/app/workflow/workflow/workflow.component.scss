@@ -1,0 +1,26 @@
+.pt-3{
+    background-color: #eee;
+    padding-left: 1rem;
+}
+.nav-tabs {
+    border-bottom: none;
+    background-color: lightgrey;
+    .nav-item {
+        width: 50%;
+        border-radius: 0;
+    }
+}
+
+.mt-2.tab-content {
+    box-shadow: 3px 0px 6px #c5bbbb;
+    min-height: 25rem;
+    padding:1rem;
+    margin-top: 0 !important;
+}
+
+.row.justify-content-md-center {
+    padding-top: 1rem;
+    button:first-child{
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,25 @@
+<form class="container">
+        <div class="form-row">
+            <label class="col" id="xx">Workflow Definition</label>
+            <button type="button" class="btn btn-primary col" (click)="openXl(content)">Lunch Editor</button>
+        </div>
+  </form>
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">{{workflowname}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <app-editor (editorResult)="getEditorResult($event)"></app-editor>
+      <div [innerHTML]="editorResult"></div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Finish</button>
+
+        <button type="button" class="btn btn-danger" (click)="modal.close('Ok click')">Cancel</button>   
+     </div>
+  </ng-template>

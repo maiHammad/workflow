@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~@syncfusion/ej2-angular-diagrams/styles/material.css';
+
+.row{
+    margin-right: 0;
+}
+
+html,body{
+    height: 100%;
+}

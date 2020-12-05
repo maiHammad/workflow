@@ -1,0 +1,13 @@
+
+div#palette-space {
+    width: 19%;
+    float: left;
+}
+div#diagram-space {
+    width: 80%;
+    max-width: 80%;
+}
+div#palette-space,div#diagram-space  {
+    display: inline-flex;
+
+}

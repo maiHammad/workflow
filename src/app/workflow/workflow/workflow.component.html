@@ -1,0 +1,30 @@
+<div  class="pt-3 pb-2 mb-3 ">
+    <h2>Workflow</h2>
+</div>
+
+<div class="container">
+    <ul ngbNav #nav="ngbNav"  [(activeId)]="active" class="nav-tabs" [destroyOnHide]="false">
+        <li [ngbNavItem]="1" [disabled]="true">
+          <a ngbNavLink>Name Workflow</a>
+          <ng-template ngbNavContent>
+              <app-weokflow-name (workflowNameObj)="receivename($event)"></app-weokflow-name>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2" [disabled]="true">
+          <a ngbNavLink>Edit Workflow</a>
+          <ng-template ngbNavContent>
+              <app-workflow-edit [workflowname]="workflowname"></app-workflow-edit>
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      <div class="row justify-content-md-center">
+          <button type="button" class="btn btn-secondary"  [disabled]="active === 1" (click)="nav.select(1)">Previous</button>
+          <button type="button" class="btn btn-primary" [disabled]="active === 2" (click)="nav.select(2)"  [disabled]="! nameIsValid">Next</button>
+        </div>
+</div>
+
+
+
+

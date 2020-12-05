@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #1c4a98;
+
+    .navbar-brand{
+        img{
+            width:90px;
+        }
+    }
+    select{
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    option{
+        color:#333;
+    }
+    }
+}
+main{
+    height: 94%;
+}

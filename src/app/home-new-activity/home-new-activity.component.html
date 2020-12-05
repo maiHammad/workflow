@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Start A New Activity</h1>
+    <h6>Select the categoury at activity you would like to start</h6>
+</div>
+<div class="row justify-content-center">
+    <div class="col-10">
+  <ul class="activLinksCont">
+    <li *ngFor="let activity of activitiesList" class="text-center">
+        <a [href]="activity.link">
+            <fa-icon [icon]="activity.icon"></fa-icon>
+            <label>{{activity.name}}</label>
+        </a>
+    </li>
+</ul>      
+    </div>
+
+</div> 

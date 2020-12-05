@@ -1,0 +1,31 @@
+<form>
+    <div class="form-group">
+      <label for="workfloName">Workflow Name</label>
+      <input type="text" class="form-control" id="workfloName"  placeholder="Workflow Name" 
+      #workfloName="ngModel" ngModel name="workfloName" required  (input)="getworkflowname($event,workfloName.valid)">
+      <div class="alert alert-danger" *ngIf="!workfloName.valid">Enter a name for the workflow</div>
+    </div>
+    <div class="form-row">
+<div class=" col-xl-9 col-sm-12">
+      <label for="Folder">Folder</label>
+      <select class="form-control" id="Folder">
+        <option>Main Folder</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="col-xl-3 col-sm-12 newFolderCont">
+           <button type="button" class="btn btn-primary ">New folder</button>
+
+ 
+    </div>
+
+    </div>
+    
+    <div class="form-group">
+      <label for="Description">Description</label>
+      <textarea class="form-control" id="Description" rows="3"></textarea>
+    </div>
+  </form>
